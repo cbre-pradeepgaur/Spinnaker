@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: dockerpgexp/pg:latest
+        image: dockerpgexp/pg:${trigger.properties['TAG']}
         ports:
         - containerPort: 3000
         livenessProbe:
